@@ -11,7 +11,7 @@ let package = Package(
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "AuroraLivePlayer",
-            targets: ["AuroraLivePlayer"]),
+            targets: ["AuroraLivePlayerTargets"]),
     ],
     dependencies: [
         .package(name: "WebRTC", url: "https://github.com/webrtc-sdk/Specs.git", .exact("114.5735.05")),
@@ -19,6 +19,16 @@ let package = Package(
         .package(url: "https://github.com/apple/swift-log.git", .upToNextMajor(from: "1.5.2"))
     ],
     targets: [
-        .binaryTarget(name: "AuroraLivePlayer", url: "https://auroralive-player.s3.amazonaws.com/Specs/1.0.0/AuroraLivePlayer.xcframework.zip", checksum: "c175d1c82abda554b3976189e02d0a702bfd316e747aa963b5e173dade5d5d5c")
+        .binaryTarget(name: "AuroraLivePlayer", url: "https://auroralive-player.s3.amazonaws.com/Specs/1.0.0/AuroraLivePlayer.xcframework.zip", checksum: "c175d1c82abda554b3976189e02d0a702bfd316e747aa963b5e173dade5d5d5c"),
+        .target(
+            name: "AuroraLivePlayerTargets",
+            dependencies: [
+                "WebRTC", "Promises",
+                .product(name: "Logging", package: "swift-log"),
+            ],
+            swiftSettings: [
+                .define("AURORA_LIVE_SDK_WHEPURL", .when(configuration: .release))
+            ]
+        ),
     ]
 )
