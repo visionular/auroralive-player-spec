@@ -1,0 +1,34 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Promises",
+        "repositoryURL": "https://github.com/google/promises.git",
+        "state": {
+          "branch": null,
+          "revision": "e70e889c0196c76d22759eb50d6a0270ca9f1d9e",
+          "version": "2.3.1"
+        }
+      },
+      {
+        "package": "WebRTC",
+        "repositoryURL": "https://github.com/webrtc-sdk/Specs.git",
+        "state": {
+          "branch": null,
+          "revision": "ad0d300aee4fed80bd76551b76635542f2d1aac5",
+          "version": "114.5735.5"
+        }
+      },
+      {
+        "package": "swift-log",
+        "repositoryURL": "https://github.com/apple/swift-log.git",
+        "state": {
+          "branch": null,
+          "revision": "532d8b529501fb73a2455b179e0bbb6d49b652ed",
+          "version": "1.5.3"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
