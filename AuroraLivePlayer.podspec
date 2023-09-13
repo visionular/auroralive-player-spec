@@ -1,24 +1,19 @@
-
-Pod::Spec.new do |spec|
-
-  spec.name         = 'AuroraLivePlayer'
-  spec.version      = '1.0.0'
-  spec.summary      = 'AuroraLivePlayer Swift Client SDK.'
-  spec.homepage     = 'https://github.com/visionular/example-auroralive-player-ios'
-  spec.license      = { :type => 'Apache 2.0', :file => 'LICENSE' }
-  spec.author       = 'Visionular, Inc'
-
-  spec.ios.deployment_target = '13.0'
-
-  spec.swift_versions = ['4.2', '5']
-  spec.source         = { :http => 'https://auroralive-player.s3.amazonaws.com/Specs/1.0.0/AuroraLivePlayer.xcframework.zip', :sha256 => 'c175d1c82abda554b3976189e02d0a702bfd316e747aa963b5e173dade5d5d5c' }
-  spec.vendored_frameworks = "AuroraLivePlayer.xcframework"
+Pod::Spec.new do |s|
+    
+  s.name         = 'AuroraLivePlayer'
+  s.version      = '1.0.1'
+  s.summary      = 'AuroraLivePlayer Swift Client SDK.'
+  s.homepage     = 'https://www.visionular.com/en/products/auroralive'
+  s.license      = { :type => 'Apache 2.0', :file => 'LICENSE' }
+  s.author       = 'Visionular, Inc'
   
-  spec.dependency 'WebRTC-SDK', '~> 114.5735.02'
-  spec.dependency 'PromisesSwift'
-  spec.dependency 'Logging'
+  s.platform     = :ios, '13.0'
+  s.ios.deployment_target = '13.0'
 
-  # spec.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
-  # spec.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+  s.swift_versions = ['4.2', '5']
+  s.source         = { :http => 'https://auroralive-player.s3.amazonaws.com/Specs/1.0.1/AuroraLivePlayerSDK.xcframework.zip', :sha256 => '88c9861e5386474065775e78196d0fc5547d6be2f08a36c9d5125647536e555c' }
+  s.vendored_frameworks = "AuroraLivePlayerSDK.xcframework"
+  
+  s.dependency 'WebRTC-SDK', '~> 114.5735.02'
 
 end
