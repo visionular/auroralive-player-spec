@@ -17,7 +17,7 @@ let package = Package(
         .package(name: "WebRTC", url: "https://github.com/webrtc-sdk/Specs.git", .exact("114.5735.05")),
     ],
     targets: [
-        .binaryTarget(name: "AuroraLivePlayerSDK", url: "https://d2wu3mohwyuz11.cloudfront.net/Specs/1.0.5/AuroraLivePlayerSDK.xcframework.zip", checksum: "26f89fd583fba2ef3ffde00bb2df5ad17e6f9d07faa8eade1c1dad246d73589a")
+        .binaryTarget(name: "AuroraLivePlayerSDK", url: "https://download.visionular.com/Specs/1.0.5/AuroraLivePlayerSDK.xcframework.zip", checksum: "26f89fd583fba2ef3ffde00bb2df5ad17e6f9d07faa8eade1c1dad246d73589a")
         ,
     ]
 )
